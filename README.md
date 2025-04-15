@@ -44,16 +44,18 @@ VS_OUTPUT vs_main( VS_INPUT Input )
 
 - Pixel Shader
 ```c
+float4 ps_main() : COLOR
+{
+   return float4(1.0f, 0.0f, 0.0f, 1.0f);
+}
+```
+```c
 // 8bit RGB : 255, 255, 255
 // Pixel Shader : 1.0f, 1.0f, 1.0f
 // float형태로 0-100
 // 함수의 반환 값을 백 버퍼의 색상(COLOR)값으로 
-float4 ps_main() : COLOR 
-{
-   // 4번째 알파값은 투명도
-   // float4(r, g, b, a)
-   return float4( 1.0f, 0.0f, 1.0f, 1.0f );  
-}
+// 4번째 알파값은 투명도
+// float4(r, g, b, a)
 ```
 ![image](https://github.com/user-attachments/assets/36778e63-54ed-492a-85be-8185b30f6d31)
 
